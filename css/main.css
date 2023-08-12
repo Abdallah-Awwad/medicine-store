@@ -21,6 +21,25 @@ h2 {
 p {
     color: var(--secondary-text-color);
 }
+ul li a {
+    color: var(--main-text-color) !important;
+    font-weight:normal !important;
+    text-decoration: none;
+}
+a.brand {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 22px;
+}
+a.brand span.main-color {
+    color: var(--main-color); 
+}
+.brand span.red-color {
+    color: var(--red-color); 
+}
+.brand span.orange-color {
+    color: var(--orange-color); 
+}
 /* Start of buttons */
 .button {
     --bs-btn-color: white;
@@ -36,21 +55,6 @@ p {
 }
 /* End of buttons */
 /* End of global */
-
-/* Start of navbar */
-nav a {
-    font-weight: 700;
-}
-nav a span.main-color {
-    color: var(--main-color); 
-}
-nav a span.red-color {
-    color: var(--red-color); 
-}
-nav a span.orange-color {
-    color: var(--orange-color); 
-}
-/* End of navbar */
 
 /* Start First Section */
 .first-section {
@@ -130,27 +134,43 @@ nav a span.orange-color {
 .most-popular {
     background-color: var(--grey-color);
 }
-.most-popular .product-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--secondary-text-color);
-}
 .most-popular .product-image {
     background-color: white;
     min-height: 162px;
     margin-bottom: 15px;
 }
 .most-popular .product-image img {
-    max-width: 70%;
-    max-height: 100%;
+    /* max-width: calc(100% - 80px); */
+    /* max-height: calc(100% - 80px) ; */
+    max-height: calc(100% - 80px) ;
 }
-/* End of popular section */
+.most-popular .product-image button {
+    position: absolute;
+    color: var(--main-color);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 7px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+}
+.most-popular .product-image:hover button {
+    opacity: 1;
+}
+.most-popular .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-text-color);
+}
+/* End of most-popular section */
 
 /* Start of order-now section */
 .order-now {
     background-color: var(--grey-color);
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 90px;
 }
 .order-now .image-background {
     background-color: var(--image-background-color);
@@ -169,3 +189,101 @@ nav a span.orange-color {
     }
 }
 /* End of order-now section */
+/* Start of browse-medicines */
+.browse-medicines {
+    background-color: white;
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+.browse-medicines .categories {
+    margin-bottom: 50px;
+    background-color: var(--grey-color);
+    border-radius: 7px;
+    width: fit-content;
+}
+.browse-medicines .categories button:not(.button) {
+    background-color: white;
+    color: var(--secondary-text-color);
+}
+.browse-medicines .categories button i:not(.button) {
+    color: var(--secondary-color);
+}
+.browse-medicines .categories button.button i {
+    color: white;
+}
+.browse-medicines .product-image {
+    background-color: var(--grey-color);
+}
+/* End of browse-medicines */
+/* Start of Customer-review */
+.customer-reviews {
+    background-color: white;
+    margin-bottom: 130px
+}
+.customer-reviews .reviews {
+    width: 85%;
+}
+.customer-reviews .reviews-container {
+    position: relative;
+    z-index: 2;
+}
+.customer-reviews .reviews-container::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 30%;
+    left: 0;
+    background-color: #1a1a1f;
+    border-radius: 7px;
+}
+.customer-reviews .carousel-indicators {
+    bottom: -70px;
+}
+.customer-reviews .review {
+    background-color: var(--grey-color);
+    padding: 15px;
+    border-radius: 7px;
+    min-height: 270px;
+}
+.customer-reviews .image {
+    max-height: 220px;
+}
+.customer-reviews .image img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.customer-reviews .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.customer-reviews .review .text > span {
+    display: block;
+    color: white;
+    background-color: var(--secondary-color);
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+/* End of Customer-review */
+footer i {
+    font-size: 19px;
+}
+footer .facebook {
+    color: #4267B2;
+}
+footer .linkedin {
+    color: #0a66c2;
+}
+footer .skype {
+    color: #00aff0;
+}
+footer .whatsapp {
+    color: #25d366;
+}
+/* Start of footer */
+/* End of footer */
