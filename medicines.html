@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Store - Medicines</title>
+    <link rel="shortcut icon" href="imgs/drugs.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+    <body>
+        <nav class="navbar navbar-expand navbar-light">
+            <div class="container">
+                <a class="brand" href="index.html">
+                    <img src="imgs/drugs.png" alt="" width="30px">
+                    <span class="main-color">med</span><span class="red-color">ic</span><span class="orange-color">ine</span>
+                </a>
+                <form class="d-flex">
+                    <ul class="navbar-nav">
+                        <li class="nav-item pe-3">
+                            <a class="nav-link" href="medicines.html">Medicines</a>
+                        </li>
+                        <li class="nav-item pe-3">
+                            <a class="nav-link" href="#">Delivery</a>
+                        </li>
+                        <li lass="nav-item pe-3">
+                            <a class="nav-link" href="#">Our services</a>
+                        </li>
+                        <li class="nav-item pe-3">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <a class="button btn btn-outline-success px-3" href="mycart.html"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
+                    </ul>
+                </form>
+            </div>
+        </nav>
+        <div class="col-12 text-center">
+            <h2>Medicines & health products</h2>
+        </div>
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="categories align-items-center p-3 justify-content-center">
+                    <button type="button" class="btn category-button mx-1 button btn-outline-success" data-category="all">All</button>
+                    <button type="button" class="btn category-button mx-1" data-category="category1"><i class="fa-solid fa-dumbbell me-1"></i> Category 1</button>
+                    <button type="button" class="btn category-button mx-1" data-category="category2"><i class="fa-solid fa-stethoscope me-1"></i> Category 2</button>
+                    <button type="button" class="btn category-button mx-1" data-category="category3"><i class="fa-solid fa-pills me-1"></i> Category 3</button>
+                    <!-- Add more category buttons as needed -->
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4" id="card-grid">
+                <div class="filter col mb-3" data-category="category1">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>10.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category2">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>12.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category3">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>14.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category1">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>10.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category2">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>12.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category3">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>14.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category1">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>10.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category2">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>12.00</span></h4>
+                    </div>
+                </div>
+                <div class="filter col mb-3" data-category="category3">
+                    <div class="product-image text-center position-relative rounded-4">
+                        <img class="img-fluid align-self-center" alt="100%x280" src="imgs/aspirin-500-mg-80-1.png">
+                        <button type="button" id="add-to-cart" class="add-to-cart d-flex justify-content-end">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>                    
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="product-name">Medicine name</div>
+                        <h4 class="product-price">$<span>14.00</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container d-flex flex-wrap align-items-center justify-content-between align-items-center mb-2 px-0">
+            <div class="col-md-4 d-flex my-3">
+                <a href="index.html" class="brand mb-3 me-2 mb-md-0 lh-1">
+                    <img src="imgs/drugs.png" alt="" width="30px">
+                    <span class="main-color">med</span><span class="red-color">ic</span><span class="orange-color">ine</span>
+                </a>
+            </div>
+            <ul class="nav col-md-8 justify-content-end my-3">
+                <li><a class="pe-3" href="medicines.html"></i>Medicines</a></li>
+                <li><a class="pe-3" href="#"></i>Delivery</a></li>
+                <li><a class="pe-3" href="#"></i>Our services</a></li>
+                <li><a href="#"></i>Contact</a></li>
+            </ul>
+            <div class="col-md-4">
+                <span>&copy; copyright @2023 medicine</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end">
+                <li>Find us on:</li>
+                <li class="ms-3"><a href="#"><i class="facebook fa-brands fa-facebook"></i></a></li>
+                <li class="ms-3"><a href="#"><i class="linkedin fa-brands fa-linkedin"></i></a></li>
+                <li class="ms-3"><a href="#"><i class="skype fa-brands fa-skype"></i></a></li>
+                <li class="ms-3"><a href="#"><i class="whatsapp fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
+<script type='text/javascript' src='js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript' src='js/script.js'></script>

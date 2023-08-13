@@ -11,7 +11,7 @@
     --grey-color: #F8F8F8;
     font-weight: 900px;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     color: var(--main-text-color) !important;
     font-weight: 700;
 }
@@ -40,6 +40,45 @@ a.brand span.main-color {
 .brand span.orange-color {
     color: var(--orange-color); 
 }
+
+/* Start of products */
+.product-name {
+    color: var(--secondary-text-color);
+}
+.categories button:not(.button) {
+    background-color: white;
+    color: var(--secondary-text-color);
+}
+.categories button i:not(.button) {
+    color: var(--secondary-color);
+}
+.categories button.button i {
+    color: white;
+}
+.product-image {
+    background-color: var(--grey-color);
+}
+.product-image img {
+    max-height: calc(100% - 80px) ;
+}
+.product-image button {
+    position: absolute;
+    color: var(--main-color);
+    background-color: white;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 7px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+}
+.product-image:hover button {
+    opacity: 1;
+}
+/* End of products */
+
 /* Start of buttons */
 .button {
     --bs-btn-color: white;
@@ -54,6 +93,7 @@ a.brand span.main-color {
     --bs-btn-active-border-color:  var(--secondary-color)
 }
 /* End of buttons */
+
 /* End of global */
 
 /* Start First Section */
@@ -139,31 +179,6 @@ a.brand span.main-color {
     min-height: 162px;
     margin-bottom: 15px;
 }
-.most-popular .product-image img {
-    /* max-width: calc(100% - 80px); */
-    /* max-height: calc(100% - 80px) ; */
-    max-height: calc(100% - 80px) ;
-}
-.most-popular .product-image button {
-    position: absolute;
-    color: var(--main-color);
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    border-radius: 7px;
-    text-decoration: none;
-    border: 1px solid var(--main-color);
-    bottom: 10px;
-    right: 10px;
-    padding: 10px;
-}
-.most-popular .product-image:hover button {
-    opacity: 1;
-}
-.most-popular .product-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--secondary-text-color);
-}
 /* End of most-popular section */
 
 /* Start of order-now section */
@@ -215,6 +230,7 @@ a.brand span.main-color {
     background-color: var(--grey-color);
 }
 /* End of browse-medicines */
+
 /* Start of Customer-review */
 .customer-reviews {
     background-color: white;
@@ -269,7 +285,12 @@ a.brand span.main-color {
     height: 30px;
     border-radius: 50%;
 }
+.customer-reviews .review .text > span i {
+    padding-top: 7px;
+}
 /* End of Customer-review */
+
+/* Start of footer */
 footer i {
     font-size: 19px;
 }
@@ -285,5 +306,69 @@ footer .skype {
 footer .whatsapp {
     color: #25d366;
 }
-/* Start of footer */
 /* End of footer */
+
+/* Start of my-cart */
+.my-cart .cart {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.my-cart .card {
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+}
+.my-cart .summary {
+    background-color: var(--secondary-color);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: white;
+}
+.my-cart img {
+    width: 3.5rem;
+}
+.my-cart select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+.my-cart input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+.my-cart input:focus::-webkit-input-placeholder {
+    color:transparent;
+}
+.check-out-button {
+    background-color: white;
+}
+.check-out-button:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+.check-out-button:active {
+    background-color: white !important;
+    color: black !important;
+}
+.my-cart a {
+    color: black; 
+}
+.my-cart a:hover {
+    color: black;
+    text-decoration: none;
+}
+/* End of my-cart */
