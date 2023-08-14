@@ -26,12 +26,12 @@ ul li a {
     font-weight:normal !important;
     text-decoration: none;
 }
-a.brand {
+.brand {
     font-weight: 700;
     text-decoration: none;
     font-size: 22px;
 }
-a.brand span.main-color {
+.brand span.main-color {
     color: var(--main-color); 
 }
 .brand span.red-color {
@@ -40,7 +40,17 @@ a.brand span.main-color {
 .brand span.orange-color {
     color: var(--orange-color); 
 }
-
+.item-added-alert {
+    opacity: 0;
+    box-shadow: 0px 1px 11px #888888;
+    transition: 0.9s ease-in-out;
+}
+.item-added-alert.show {
+    opacity: 1;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem var(--main-color);
+}
 /* Start of products */
 .product-name {
     color: var(--secondary-text-color);
@@ -90,11 +100,29 @@ a.brand span.main-color {
     opacity: 80%;
 }
 .button:active {
-    --bs-btn-active-border-color:  var(--secondary-color)
+    --bs-btn-active-border-color: var(--secondary-color)
 }
 /* End of buttons */
 
 /* End of global */
+
+/* Start of navbar */
+.navbar-nav > li:hover, .nav > li.effect:hover {
+    background: linear-gradient(90deg, var(--main-color) 0%, var(--secondary-color) 49%);
+}
+.navbar-nav > li:hover > a, .nav > li:hover > a {
+    color: white !important;
+}
+.nav i:hover {
+    opacity: 0.7;
+}
+.fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+  }
+  
+
+/* End of navbar */
 
 /* Start First Section */
 .first-section {
@@ -204,6 +232,7 @@ a.brand span.main-color {
     }
 }
 /* End of order-now section */
+
 /* Start of browse-medicines */
 .browse-medicines {
     background-color: white;
@@ -261,13 +290,10 @@ a.brand span.main-color {
     background-color: var(--grey-color);
     padding: 15px;
     border-radius: 7px;
-    min-height: 270px;
-}
-.customer-reviews .image {
-    max-height: 220px;
+    height: 270px;
 }
 .customer-reviews .image img {
-    max-height: 100%;
+    max-height: 220px;
     max-width: 100%;
 }
 .customer-reviews .carousel-indicators button {
@@ -323,6 +349,12 @@ footer .whatsapp {
     border-radius: 1rem;
     border: transparent;
 }
+.my-cart .back-to-shop {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}                                
+
 .my-cart .summary {
     background-color: var(--secondary-color);
     border-top-right-radius: 1rem;
@@ -372,3 +404,19 @@ footer .whatsapp {
     text-decoration: none;
 }
 /* End of my-cart */
+
+/* Start of Login page */
+.login {
+    background-color: var(--grey-color);
+}
+.login h5 {
+    letter-spacing: 1px;
+}
+.login img {
+    border-radius: 10px 0 0 10px;
+    max-height: 95vh;
+}
+.login p, .login p a {
+    color: var(--secondary-text-color);
+}
+/* End of Login page */
