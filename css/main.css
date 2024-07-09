@@ -40,17 +40,36 @@ ul li a {
 .brand span.orange-color {
     color: var(--orange-color); 
 }
-.item-added-alert {
+.custom-alert {
     opacity: 0;
     box-shadow: 0px 1px 11px #888888;
     transition: 0.9s ease-in-out;
 }
-.item-added-alert.show {
+.custom-alert.show {
     opacity: 1;
 }
 .form-control:focus {
     box-shadow: 0 0 0 0.25rem var(--main-color);
 }
+
+/* Start of buttons */
+.button {
+    --bs-btn-color: white;
+    background: linear-gradient(90deg, var(--main-color) 0%, var(--secondary-color) 49%);
+    border-color: var(--secondary-color);
+}
+.button:hover {
+    border-color: var(--secondary-color);
+    opacity: 80%;
+}
+.button:active, .btn:first-child:active:focus-visible, .button:focus-visible {
+    --bs-btn-active-border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    box-shadow: var(--main-color);
+}
+/* End of buttons */
+
 /* Start of products */
 .product-name {
     color: var(--secondary-text-color);
@@ -89,21 +108,6 @@ ul li a {
 }
 /* End of products */
 
-/* Start of buttons */
-.button {
-    --bs-btn-color: white;
-    background: linear-gradient(90deg, var(--main-color) 0%, var(--secondary-color) 49%);
-    border-color: var(--secondary-color);
-}
-.button:hover {
-    border-color: var(--secondary-color);
-    opacity: 80%;
-}
-.button:active {
-    --bs-btn-active-border-color: var(--secondary-color)
-}
-/* End of buttons */
-
 /* End of global */
 
 /* Start of navbar */
@@ -119,8 +123,7 @@ ul li a {
 .fixed-top.scrolled {
     background-color: #fff !important;
     transition: background-color 200ms linear;
-  }
-  
+}  
 
 /* End of navbar */
 
@@ -130,6 +133,9 @@ ul li a {
     z-index: 2;
     background-color: var(--background-color);
     overflow: hidden;
+}
+.first-section .featuring {
+    min-height: 680px;
 }
 .first-section .row .button span {
     font-size: 19px;
@@ -170,7 +176,6 @@ ul li a {
     left: 50%;
     top: 50%;
     border-radius: 50%;
-    
 }
 .first-section .circles.circle-1 {
     width: 110%;
@@ -195,19 +200,31 @@ ul li a {
     .first-section .delivery-guy {
         width: 100%;
     }
+    .first-section .background-right {
+        align-self: center;
+    }
 }
 /* End First Section */
 
-/* Start of most-popular section */
-.most-popular {
+/* Start of most-recent section */
+.most-recent {
     background-color: var(--grey-color);
 }
-.most-popular .product-image {
-    background-color: white;
-    min-height: 162px;
-    margin-bottom: 15px;
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
 }
-/* End of most-popular section */
+.image-wrapper img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+}
+/* End of most-recent section */
 
 /* Start of order-now section */
 .order-now {
@@ -223,14 +240,14 @@ ul li a {
     max-width: 90%;
     max-height: 100%;
 }
-@media (max-width: 990px) {
+/* @media (min-width: 990px) {
     .order-now .widgets {
-        flex-wrap: wrap !important;
+        flex-wrap: no-wrap !important;
     }
     .order-now .widgets .image-background {
         margin: 0 0 20px !important;
     }
-}
+} */
 /* End of order-now section */
 
 /* Start of browse-medicines */
