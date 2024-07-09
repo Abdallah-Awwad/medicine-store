@@ -29,7 +29,7 @@
                             <a class="nav-link" href="#">Our services</a>
                         </li>
                         <li class="nav-item me-3 rounded-4 text-center">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="login.html" id="log">Login</a>
                         </li>
                         <a class="button btn btn-outline-success px-3" href="mycart.html"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
                     </ul>
@@ -40,7 +40,7 @@
             <h2>Medicines & health products</h2>
         </div>
         <div class="container">
-            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <input class="form-control" id="myInput" type="text" placeholder="What are you looking for?">
             <div class="row text-center justify-content-center">
                 <div class="categories align-items-center p-3 justify-content-center">
                     <button type="button" class="category-button btn mx-1 button btn-outline-success active-category" data-category="all">All</button>
@@ -210,12 +210,13 @@
     $(document).ready(function(){
         $("#myInput").on("keyup", function() {
             let value = $(this).val().toLowerCase();
-            let dataCat = $('.active-category').attr('data-category');
+            let category = $('.active-category').attr('data-category');
             $(".filter").filter(function() {
-                if (dataCat == "all") {
-                    $(this).toggle($(this).find(".product-name").text().toLowerCase().indexOf(value) > -1);
+                let textToLowerCase = $(this).find(".product-name").text().toLowerCase().indexOf(value);
+                if (category == "all") {
+                    $(this).toggle(textToLowerCase > -1);
                 } else {
-                    $(this).toggle($(this).find(".product-name").text().toLowerCase().indexOf(value) > -1 && this.getAttribute('data-category') == dataCat);
+                    $(this).toggle(textToLowerCase > -1 && this.getAttribute('data-category') == category);
                 }
             });
         });
